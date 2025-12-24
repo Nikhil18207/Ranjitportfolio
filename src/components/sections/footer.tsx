@@ -31,10 +31,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-12 md:gap-24">
           <div className="flex flex-col gap-4">
             <h4 className="text-[12px] tracking-[0.2em] font-bold text-white mb-2">PAGES</h4>
-            <a href="#narrative" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white">NARRATIVE</a>
-            <a href="#commercial" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white">COMMERCIAL</a>
-            <a href="#music-videos" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white">MUSIC VIDEOS</a>
-            <a href="#bio" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white">BIO</a>
+            <a href="/" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white transition-colors">HOME</a>
+            <a href="/#video-1" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white transition-colors">COMMERCIAL</a>
+            <a href="/#video-4" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white transition-colors">NARRATIVE</a>
+            <a href="/#video-5" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white transition-colors">MUSIC VIDEOS</a>
+            <a href="/bio" className="text-[12px] tracking-[0.15em] text-white/70 hover:text-white transition-colors">BIO</a>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -52,14 +53,17 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h4 className="text-[12px] tracking-[0.2em] font-bold text-white mb-2">NEWSLETTER</h4>
+          <h4 className="text-[12px] tracking-[0.2em] font-bold text-white mb-2">UPCOMING VIDEOS</h4>
+          <p className="text-[11px] tracking-[0.1em] text-white/50 max-w-[250px] leading-relaxed mb-2">
+            Join the waitlist to get notified when new videos drop
+          </p>
           <div className="flex border-b border-white pb-2 min-w-[250px]">
             <input
               type="email"
               placeholder="YOUR EMAIL"
-              className="bg-transparent border-none text-[12px] tracking-[0.15em] focus:outline-none w-full"
+              className="bg-transparent border-none text-[12px] tracking-[0.15em] focus:outline-none w-full text-white placeholder:text-white/40"
             />
-            <button className="text-[12px] tracking-[0.15em] hover:opacity-70">JOIN</button>
+            <button className="text-[12px] tracking-[0.15em] hover:opacity-70 transition-opacity">JOIN WAITLIST</button>
           </div>
         </div>
       </div>

@@ -31,9 +31,11 @@ const FullPageVideoSection = ({ videoUrl, title, category, index }: VideoSection
                         });
                         setIsPlaying(true);
                     } else {
-                        // Video is out of view - pause it
+                        // Video is out of view - pause it AND mute it
                         video.pause();
+                        video.muted = true;
                         setIsPlaying(false);
+                        setIsMuted(true); // Reset mute state
                     }
                 });
             },

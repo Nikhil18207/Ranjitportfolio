@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Play, Volume2, VolumeX } from "lucide-react";
 
@@ -41,6 +41,36 @@ const HeroSection = () => {
       }
     }
   };
+
+  // Auto-mute when scrolling away from hero section
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            // Hero video is out of view - mute it
+            video.muted = true;
+            setIsMuted(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Mute when less than 30% visible
+      }
+    );
+
+    const heroSection = video.closest('section');
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black flex flex-col items-center justify-center">

@@ -11,12 +11,12 @@ import React from 'react';
  */
 export default function Header() {
   const menuItems = [
-    { label: 'NARRATIVE', href: '#narrative' },
-    { label: 'COMMERCIAL', href: '#commercial' },
-    { label: 'MUSIC-VIDEOS', href: '#music-videos' },
-    { label: 'BIO', href: '#bio' },
-    { label: 'GEAR', href: '#gear' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'HOME', href: '/' },
+    { label: 'COMMERCIAL', href: '/#video-1' }, // Baba Jeera Rice
+    { label: 'NARRATIVE', href: '/#video-4' }, // Lifecycle of a Butterfly
+    { label: 'MUSIC-VIDEOS', href: '/#video-5' }, // Ethirveetu Kadhal
+    { label: 'BIO', href: '/bio' },
+    { label: 'CONTACT', href: '/#contact' },
   ];
 
   return (

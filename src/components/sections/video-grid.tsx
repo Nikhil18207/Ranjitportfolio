@@ -9,34 +9,34 @@ interface VideoItem {
 
 const videos: VideoItem[] = [
   {
-    title: "THE SILENCE",
-    category: "NARRATIVE",
-    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    title: "URBAN BEAT",
+    title: "BABA JEERA RICE",
     category: "COMMERCIAL",
     image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "ECHOES",
-    category: "MUSIC VIDEO",
-    image: "https://images.unsplash.com/photo-1514525253344-99a42999d22f?auto=format&fit=crop&q=80&w=800",
+    title: "GARUDA INTELLIGENCE",
+    category: "BRAND FILM",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "STREET LIFE",
-    category: "COMMERCIAL",
+    title: "ALPHA.IN",
+    category: "AI ADVERTISING",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    title: "LIFECYCLE OF A BUTTERFLY",
+    category: "CINEMATIC",
+    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    title: "ETHIRVEETU KADHAL",
+    category: "AI MUSIC VIDEO",
+    image: "/videos/thumbnails/ethirveetu-kadhal.png",
+  },
+  {
+    title: "MNR MOTION SHOWREEL",
+    category: "SHOWREEL",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    title: "WILDERNESS",
-    category: "NARRATIVE",
-    image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    title: "NEON NIGHTS",
-    category: "MUSIC VIDEO",
-    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
