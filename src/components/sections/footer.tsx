@@ -12,7 +12,7 @@ export default function Footer() {
               className="w-8 h-8 text-white" 
               fill="none" 
               stroke="white" 
-              lineCap="round" 
+              strokeLinecap="round" 
               strokeWidth="2.5"
             >
               <circle cx="50" cy="50" r="45" />
