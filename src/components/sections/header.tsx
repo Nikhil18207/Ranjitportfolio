@@ -31,7 +31,7 @@ export default function Header() {
               className="w-full h-full text-white" 
               fill="none" 
               stroke="white" 
-              lineCap="round" 
+              strokeLinecap="round" 
               strokeWidth="2.5"
             >
               <circle cx="50" cy="50" r="45" />
