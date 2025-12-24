@@ -18,19 +18,22 @@ const HeroSection = () => {
   // Using the provided image asset as a background since a direct video URL was not found in the manifest.
   // In a real production environment, this would be a <video> tag.
   const backgroundAsset = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72144296-88fa-4ff6-9ae2-096632439085-wix-com/assets/images/images_2.png";
+  const videoAsset = "https://cdn.pixabay.com/video/2021/04/12/70817-536979510_large.mp4"; // Cinematic beach placeholder
 
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black flex flex-col items-center justify-center">
       {/* Background Media Container */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={backgroundAsset}
-          alt="Cinematic beach background"
-          fill
-          priority
-          className="object-cover opacity-70"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          poster={backgroundAsset}
+        >
+          <source src={videoAsset} type="video/mp4" />
+        </video>
         {/* Dark Vignette Overlay */}
         <div 
           className="absolute inset-0 bg-black/30 pointer-events-none" 
