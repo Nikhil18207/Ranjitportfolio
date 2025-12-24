@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { Play, Volume2, VolumeX } from "lucide-react";
 
 /**
  * HeroSection Component
@@ -12,11 +12,11 @@ import { Play } from "lucide-react";
  * - Background video (or high-quality image fallback)
  * - Centered "LATEST WORK" bold heading
  * - Play Video interaction button
- * - "All Videos +" ghost button at the bottom
+ * - Volume toggle for background video
  */
 const HeroSection = () => {
-  // Using the provided image asset as a background since a direct video URL was not found in the manifest.
-  // In a real production environment, this would be a <video> tag.
+  const [isMuted, setIsMuted] = useState(true);
+
   const backgroundAsset = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72144296-88fa-4ff6-9ae2-096632439085-wix-com/assets/images/images_2.png";
   const videoAsset = "https://cdn.pixabay.com/video/2021/04/12/70817-536979510_large.mp4"; // Cinematic beach placeholder
 
@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
-          muted
+          muted={isMuted}
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-60"
@@ -61,16 +61,16 @@ const HeroSection = () => {
         {/* Play Video Button */}
         <button 
           className="group flex flex-col items-center gap-2 text-white transition-opacity duration-300 hover:opacity-70"
-          onClick={() => console.log("Play sequence started")}
+          onClick={() => setIsMuted(!isMuted)}
         >
           <div className="rounded-full border border-white p-3 mb-1 flex items-center justify-center">
-            <Play size={20} fill="white" className="ml-0.5" />
+            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </div>
           <span 
             className="italic font-light tracking-[0.15em] uppercase text-[13px]"
             style={{ fontFamily: "var(--font-sans)" }}
           >
-            Play Video
+            {isMuted ? "Unmute for Voice" : "Mute Sound"}
           </span>
         </button>
       </div>
