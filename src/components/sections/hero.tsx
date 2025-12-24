@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Play, Volume2, VolumeX } from "lucide-react";
 
@@ -16,6 +16,7 @@ import { Play, Volume2, VolumeX } from "lucide-react";
  */
 const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // TO USE YOUR OWN VIDEO:
   // 1. Put your video in: public/videos/hero-background.mp4
@@ -29,11 +30,24 @@ const HeroSection = () => {
   // const backgroundAsset = "/videos/hero-poster.jpg";
   // const videoAsset = "/videos/hero-background.mp4";
 
+  const toggleFullscreen = () => {
+    if (videoRef.current) {
+      if (!document.fullscreenElement) {
+        videoRef.current.requestFullscreen().catch((err) => {
+          console.log("Fullscreen error:", err);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  };
+
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black flex flex-col items-center justify-center">
       {/* Background Media Container */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           muted={isMuted}
           loop
@@ -51,6 +65,17 @@ const HeroSection = () => {
           }}
         />
       </div>
+
+      {/* Fullscreen/Maximize Button - Top Right */}
+      <button
+        onClick={toggleFullscreen}
+        className="absolute top-8 right-8 z-20 p-3 rounded-full border border-white/50 text-white hover:bg-white/10 hover:border-white transition-all duration-300 group"
+        aria-label="Fullscreen"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+        </svg>
+      </button>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4">
