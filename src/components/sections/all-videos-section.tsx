@@ -3,37 +3,32 @@
 import React from "react";
 import FullPageVideoSection from "./full-page-video";
 
-// Video data - you can easily add more videos here
+// Video data - Starts from Video2 (Video1 is in hero section)
 const videos = [
     {
-        videoUrl: "/videos/projects/Video1.mp4",
-        title: "PROJECT ONE",
-        category: "CINEMATIC",
-    },
-    {
         videoUrl: "/videos/projects/Video2.mp4",
-        title: "PROJECT TWO",
+        title: "BABA JEERA RICE",
         category: "COMMERCIAL",
     },
     {
         videoUrl: "/videos/projects/Video3.mp4",
-        title: "PROJECT THREE",
+        title: "GARUDA INTELLIGENCE",
         category: "BRAND FILM",
     },
     {
         videoUrl: "/videos/projects/Video4.mp4",
-        title: "PROJECT FOUR",
+        title: "ALPHA.IN",
         category: "AI ADVERTISING",
     },
     {
         videoUrl: "/videos/projects/Video5.mp4",
-        title: "PROJECT FIVE",
-        category: "SHOWREEL",
+        title: "LIFECYCLE OF A BUTTERFLY",
+        category: "CINEMATIC",
     },
     {
         videoUrl: "/videos/projects/Video6.mp4",
-        title: "PROJECT SIX",
-        category: "MOTION GRAPHICS",
+        title: "ETHIRVEETU KADHAL",
+        category: "AI MUSIC VIDEO",
     },
 ];
 
