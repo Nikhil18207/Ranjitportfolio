@@ -25,7 +25,16 @@ const videos = [
         title: "PROJECT FOUR",
         category: "AI ADVERTISING",
     },
-
+    {
+        videoUrl: "/videos/projects/Video5.mp4",
+        title: "PROJECT FIVE",
+        category: "SHOWREEL",
+    },
+    {
+        videoUrl: "/videos/projects/Video6.mp4",
+        title: "PROJECT SIX",
+        category: "MOTION GRAPHICS",
+    },
 ];
 
 const AllVideosSection = () => {
