@@ -26,12 +26,12 @@ export default function Header() {
         <a href="/" className="flex items-center group gap-3">
           <div className="relative w-8 h-8 flex items-center justify-center">
             {/* Minimalist circular icon - based on screenshot observation */}
-            <svg 
-              viewBox="0 0 100 100" 
-              className="w-full h-full text-white" 
-              fill="none" 
-              stroke="white" 
-              strokeLinecap="round" 
+            <svg
+              viewBox="0 0 100 100"
+              className="w-full h-full text-white"
+              fill="none"
+              stroke="white"
+              strokeLinecap="round"
               strokeWidth="2.5"
             >
               <circle cx="50" cy="50" r="45" />
@@ -42,7 +42,7 @@ export default function Header() {
             </svg>
           </div>
           <span className="font-logo text-[14px] leading-none tracking-[0.2em] font-normal uppercase">
-            DANIEL.RUSSO
+            RANJIT.NAVALAN
           </span>
         </a>
 

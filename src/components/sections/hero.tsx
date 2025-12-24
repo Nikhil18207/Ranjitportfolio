@@ -17,8 +17,17 @@ import { Play, Volume2, VolumeX } from "lucide-react";
 const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
 
+  // TO USE YOUR OWN VIDEO:
+  // 1. Put your video in: public/videos/hero-background.mp4
+  // 2. Put your poster image in: public/videos/hero-poster.jpg
+  // 3. Update the paths below:
+
   const backgroundAsset = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72144296-88fa-4ff6-9ae2-096632439085-wix-com/assets/images/images_2.png";
-  const videoAsset = "https://cdn.pixabay.com/video/2021/04/12/70817-536979510_large.mp4"; // Cinematic beach placeholder
+  const videoAsset = "/videos/projects/Video1.mp4";
+
+  // Example with local files (uncomment to use):
+  // const backgroundAsset = "/videos/hero-poster.jpg";
+  // const videoAsset = "/videos/hero-background.mp4";
 
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black flex flex-col items-center justify-center">
@@ -35,17 +44,17 @@ const HeroSection = () => {
           <source src={videoAsset} type="video/mp4" />
         </video>
         {/* Dark Vignette Overlay */}
-        <div 
-          className="absolute inset-0 bg-black/30 pointer-events-none" 
-          style={{ 
-            boxShadow: "inset 0 0 150px rgba(0,0,0,0.5)" 
-          }} 
+        <div
+          className="absolute inset-0 bg-black/30 pointer-events-none"
+          style={{
+            boxShadow: "inset 0 0 150px rgba(0,0,0,0.5)"
+          }}
         />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4">
-        <h1 
+        <h1
           className="hero-heading text-white mb-6"
           style={{
             fontSize: "clamp(2.5rem, 8vw, 4.5rem)",
@@ -59,14 +68,14 @@ const HeroSection = () => {
         </h1>
 
         {/* Play Video Button */}
-        <button 
+        <button
           className="group flex flex-col items-center gap-2 text-white transition-opacity duration-300 hover:opacity-70"
           onClick={() => setIsMuted(!isMuted)}
         >
           <div className="rounded-full border border-white p-3 mb-1 flex items-center justify-center">
             {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </div>
-          <span 
+          <span
             className="italic font-light tracking-[0.15em] uppercase text-[13px]"
             style={{ fontFamily: "var(--font-sans)" }}
           >
